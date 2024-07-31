@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "dev.ebo2022.matterhorn.core.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "RegionMixin",
+    "SurfaceSystemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

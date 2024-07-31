@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "matterhorn",
+  "version": "${version}",
+  "name": "Matterhorn",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "ebo2022"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/matterhorn/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.ebo2022.matterhorn.core.fabric.MatterhornFabric"
+    ],
+    "terrablender": [
+      "dev.ebo2022.matterhorn.core.fabric.MatterhornFabric"
+    ],
+    "fabric-datagen": [
+      "dev.ebo2022.matterhorn.core.fabric.MatterhornFabricDatagen"
+    ]
+  },
+  "mixins": [
+    "matterhorn-common.mixins.json",
+    "matterhorn-fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "terrablender": ">=4.0.0.1",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "lithostitched": "*"
+  }
+}
