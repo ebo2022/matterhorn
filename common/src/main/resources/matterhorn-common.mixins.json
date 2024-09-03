@@ -6,8 +6,7 @@
   "client": [
   ],
   "mixins": [
-    "RegionMixin",
-    "SurfaceSystemMixin"
+    "RandomStateMixin"
   ],
   "injectors": {
     "defaultRequire": 1

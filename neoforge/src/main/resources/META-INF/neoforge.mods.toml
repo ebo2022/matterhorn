@@ -29,7 +29,7 @@ side = "BOTH"
 
 [[dependencies.matterhorn]]
 modId="terrablender"
-type = "required"
+type = "optional"
 versionRange="[4.0.0.1,)"
 ordering="NONE"
 side="BOTH"

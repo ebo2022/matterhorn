@@ -11,17 +11,8 @@ loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
     neoForge {
     }
-
-    runs {
-        data {
-            data()
-            programArgs "--all", "--mod", "matterhorn"
-            programArgs "--output", project(':common').file('src/main/generated/resources/').getAbsolutePath()
-        }
-    }
 }
 
-sourceSets.main.resources { srcDir(project(':common').file('src/main/generated/resources/').getAbsolutePath()) }
 
 configurations {
     common {

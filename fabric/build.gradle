@@ -7,12 +7,6 @@ architectury {
     fabric()
 }
 
-fabricApi {
-    configureDataGeneration()
-}
-
-sourceSets.main.resources { srcDir(project(':common').file('src/main/generated/resources/').getAbsolutePath()) }
-
 configurations {
     common {
         canBeResolved = true

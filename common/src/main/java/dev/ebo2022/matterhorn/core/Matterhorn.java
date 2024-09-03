@@ -1,8 +1,8 @@
 package dev.ebo2022.matterhorn.core;
 
-import dev.ebo2022.matterhorn.common.world.level.levelgen.biome.region.MatterhornRegion;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import terrablender.api.Regions;
 
 public class Matterhorn {
 
@@ -12,11 +12,15 @@ public class Matterhorn {
 
     }
 
-    public static void initTerrablender() {
-        Regions.register(MatterhornRegion.INSTANCE);
+    public static void registerDensityFunctions() {
+
     }
 
     public static ResourceLocation id(String string) {
         return string.contains(":") ? ResourceLocation.parse(string) : ResourceLocation.fromNamespaceAndPath(MOD_ID, string);
+    }
+
+    public static <T> ResourceKey<T> key(ResourceKey<? extends Registry<T>> registry, String string) {
+        return ResourceKey.create(registry, id(string));
     }
 }
