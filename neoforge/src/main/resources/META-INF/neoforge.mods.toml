@@ -35,4 +35,4 @@ ordering="NONE"
 side="BOTH"
 
 [[mixins]]
-config = "matterhorn.mixins.json"
+config = "matterhorn-common.mixins.json"

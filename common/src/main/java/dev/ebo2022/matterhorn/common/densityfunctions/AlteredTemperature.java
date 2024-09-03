@@ -7,7 +7,7 @@ import static net.minecraft.world.level.levelgen.DensityFunctions.*;
 public class AlteredTemperature {
 
     public static DensityFunction create(DensityFunction original, DensityFunction continentalness) {
-        // Keep ocean biomes as-is
+        // keep ocean biomes as-is
         return rangeChoice(
                 continentalness,
                 -0.19D,

@@ -22,8 +22,4 @@ public class HumidityUtil {
                 original
         );
     }
-
-    public static DensityFunction desertTransition(DensityFunction temperature, double minTemperature, double maxTemperature) {
-
-    }
 }

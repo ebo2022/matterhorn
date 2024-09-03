@@ -1,6 +1,7 @@
 {
   "required": true,
   "package": "dev.ebo2022.matterhorn.core.mixin",
+  "plugin": "dev.ebo2022.matterhorn.core.MatterhornMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [
