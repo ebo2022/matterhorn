@@ -10,10 +10,16 @@ import terrablender.api.Region;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
-public class TerraBlenderDensityFunctions {
+public class TerraBlenderIntegration {
+
+    public static final String MOD_ID = "terrablender";
 
     public static void register(BiConsumer<ResourceLocation, KeyDispatchDataCodec<? extends DensityFunction>> registry) {
         registry.accept(Matterhorn.id("region_choice"), RegionChoice.CODEC);
+    }
+
+    public static DensityFunction regionChoice(ResourceLocation region, DensityFunction whenInRegion, DensityFunction whenOutOfRegion) {
+        return new RegionChoice(region, whenInRegion, whenOutOfRegion);
     }
 
     private record RegionChoice(ResourceLocation region, DensityFunction whenInRegion, DensityFunction whenOutOfRegion) implements DensityFunction {
@@ -57,6 +63,5 @@ public class TerraBlenderDensityFunctions {
         }
     }
 
-    public record SinglePointContextWithRegion(int blockX, int blockY, int blockZ, Supplier<Region> region) implements DensityFunction.FunctionContext {
-    }
+    public record SinglePointContextWithRegion(int blockX, int blockY, int blockZ, Supplier<Region> region) implements DensityFunction.FunctionContext {}
 }

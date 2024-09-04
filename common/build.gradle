@@ -12,4 +12,6 @@ dependencies {
     // Do NOT use other classes from Fabric Loader.
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
     modImplementation "com.github.glitchfiend:TerraBlender-common:${rootProject.minecraft_version}-${rootProject.terrablender_version}"
+    modImplementation "maven.modrinth:expanded-ecosphere:${rootProject.wwee_version}"
+    implementation "io.github.llamalad7:mixinextras-fabric:<version>"
 }

@@ -2,7 +2,7 @@ package dev.ebo2022.matterhorn.core;
 
 import com.mojang.logging.LogUtils;
 import dev.ebo2022.matterhorn.common.util.PlatformUtil;
-import dev.ebo2022.matterhorn.core.integration.TerraBlenderDensityFunctions;
+import dev.ebo2022.matterhorn.core.integration.TerraBlenderIntegration;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -23,7 +23,7 @@ public class Matterhorn {
 
     public static void registerDensityFunctions(BiConsumer<ResourceLocation, KeyDispatchDataCodec<? extends DensityFunction>> registry) {
         if (PlatformUtil.isModLoaded("terrablender"))
-            TerraBlenderDensityFunctions.register(registry);
+            TerraBlenderIntegration.register(registry);
     }
 
     public static ResourceLocation id(String string) {
