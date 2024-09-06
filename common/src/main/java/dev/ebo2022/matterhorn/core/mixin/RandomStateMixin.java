@@ -2,6 +2,7 @@ package dev.ebo2022.matterhorn.core.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import dev.ebo2022.matterhorn.common.swappers.DensitySwapper;
 import dev.ebo2022.matterhorn.core.Matterhorn;
 import dev.ebo2022.matterhorn.core.integration.LarionIntegration;
 import net.minecraft.world.level.levelgen.DensityFunction;
@@ -24,7 +25,7 @@ public class RandomStateMixin {
                 instance.fluidLevelFloodednessNoise().mapAll(visitor),
                 instance.fluidLevelSpreadNoise().mapAll(visitor),
                 instance.lavaNoise().mapAll(visitor),
-                instance.temperature().mapAll(visitor),
+                DensitySwapper.temperature(instance.temperature(), instance.continents()).mapAll(visitor),
                 instance.vegetation().mapAll(visitor),
                 instance.continents().mapAll(visitor),
                 instance.erosion().mapAll(visitor),
