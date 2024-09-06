@@ -15,7 +15,6 @@ import java.util.function.Supplier;
 public class MatterhornMixinPlugin implements IMixinConfigPlugin {
 
     private static final Set<String> TERRABLENDER_MIXINS = Set.of(
-            "dev.ebo2022.matterhorn.core.mixin.RandomStateMixin"
     );
     private static final Supplier<Boolean> TERRABLENDER_PRESENT = Suppliers.memoize(() -> {
         // neo crashes if we access ModList too early, so we have to check for classes directly
