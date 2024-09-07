@@ -1,7 +1,6 @@
 package dev.ebo2022.matterhorn.core;
 
 import com.google.common.base.Suppliers;
-import dev.architectury.injectables.annotations.PlatformOnly;
 import dev.architectury.injectables.targets.ArchitecturyTarget;
 import dev.ebo2022.matterhorn.common.util.PlatformUtil;
 import org.objectweb.asm.tree.ClassNode;
